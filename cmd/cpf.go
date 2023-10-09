@@ -24,6 +24,10 @@ func init() {
 }
 
 func cpfExecute(cmd *cobra.Command, args []string) error {
+	if len(os.Args[2:]) == 0 {
+		println(cpf())
+	}
+
 	for _, arg := range os.Args[2:] {
 		if len(os.Args[2:]) > 1 {
 			return errors.New("unexpected args size")
