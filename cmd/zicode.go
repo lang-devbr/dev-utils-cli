@@ -21,8 +21,18 @@ var (
 	}
 )
 
+var (
+	cepCommand = &cobra.Command{
+		Use:   "cep",
+		Short: "Command to get given zipcode",
+		Long:  "Command to get given zipcode (service used: viacep.com.br)",
+		RunE:  zipCodeExecute,
+	}
+)
+
 func init() {
 	rootCmd.AddCommand(zipCodeCommand)
+	rootCmd.AddCommand(cepCommand)
 }
 
 type zipCodeResponse struct {
