@@ -1,0 +1,11 @@
+curl 'https://buscacepinter.correios.com.br/app/endereco/carrega-cep-endereco.php' \
+  -H 'authority: buscacepinter.correios.com.br' \
+  -H 'accept: */*' \
+  -H 'accept-language: en-US,en;q=0.9,pt;q=0.8' \
+  -H 'content-type: application/x-www-form-urlencoded; charset=UTF-8' \
+  -H 'origin: https://buscacepinter.correios.com.br' \
+  -H 'referer: https://buscacepinter.correios.com.br/app/endereco/index.php' \
+  -H 'sec-fetch-mode: cors' \
+  -H 'sec-fetch-site: same-origin' \
+  --data-raw 'pagina=%2Fapp%2Fendereco%2Findex.php&cepaux=&mensagem_alerta=&endereco=sp&tipoCEP=ALL' \
+  --compressed
